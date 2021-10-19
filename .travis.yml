@@ -11,4 +11,5 @@ script:
 branches:
   only:
     - main
+    - master
     - development
