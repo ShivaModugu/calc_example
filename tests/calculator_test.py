@@ -37,9 +37,3 @@ def test_calculator_divide():
     calc = Calculator()
     result = calc.divide_numbers(4,2)
     assert result == 2
-
-def test_calculator_dividebyzero():
-    """ tests division by zero"""
-    calc = Calculator()
-    result = calc.divide_numbers(3,0)
-    return result
