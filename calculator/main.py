@@ -21,5 +21,9 @@ class Calculator:
         return self.result
     def divide_numbers(self, value_a, value_b):
         """ multiply two numbers and store the result"""
-        self.result = value_a / value_b
-        return self.result
+        try:
+            self.result = value_a / value_b
+        except ZeroDivisionError as err:
+            raise ValueError from err
+        else:
+            return self.result
