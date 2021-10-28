@@ -1,4 +1,7 @@
-""" This is the increment function"""
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
+
 class Calculator:
     """ This is the Calculator class"""
 
@@ -16,14 +19,13 @@ class Calculator:
         self.result = self.result - value_a
         return self.result
     def multiply_numbers(self, value_a, value_b):
-        """ multiply two numbers and store the result"""
+        """ multiply two numbers and get result"""
         self.result = value_a * value_b
         return self.result
     def divide_numbers(self, value_a, value_b):
-        """ multiply two numbers and store the result"""
+        """ divide two numbers and get result"""
         try:
             self.result = value_a / value_b
-        except ZeroDivisionError as err:
-            raise ValueError from err
-        else:
-            return self.result
+        except ZeroDivisionError:
+            print("A number cannot be divided by zero")
+        return self.result
