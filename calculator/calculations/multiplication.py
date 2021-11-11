@@ -2,7 +2,7 @@
 from calculator.calculations.calculation import Calculation
 
 class Multiplication(Calculation):
-    """subtraction calculation object"""
+    """multiplication calculation object"""
     def get_result(self):
         """get the multiplication results"""
         result = 1.0
