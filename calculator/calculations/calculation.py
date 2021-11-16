@@ -1,18 +1,17 @@
 """Calculation Class"""
 class Calculation:
-    """ calculation abstract base class"""
-    # pylint: disable=too-few-public-methods
-    def __init__(self,values: tuple):
-        """ constructor method"""
-        self.values = Calculation.convert_args_to_list_float(values)
+    """ calculation base class"""
+    def __init__(self,v: tuple):
+        """constructor"""
+        self.v = Calculation.args_to_list_float(v)
     @classmethod
-    def create(cls, values: tuple):
+    def create(cls, v: tuple):
         """ factory method"""
-        return cls(values)
+        return cls(v)
     @staticmethod
-    def convert_args_to_list_float(values):
+    def args_to_list_float(v):
         """ standardize values to list of floats"""
         list_values_float = []
-        for item in values:
-            list_values_float.append(float(item))
+        for i in v:
+            list_values_float.append(float(i))
         return tuple(list_values_float)
