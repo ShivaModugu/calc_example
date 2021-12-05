@@ -1,17 +1,22 @@
 """Calculation Class"""
+
+
 class Calculation:
-    """ calculation base class"""
-    def __init__(self,values: tuple):
-        """constructor"""
-        self.values = Calculation.args_to_list_float(values)
+    """ Abstraction"""
+
+    def __init__(self, values: tuple):
+        """ constructor method"""
+        self.values = Calculation.convert_args_to_tuple(values)
+
     @classmethod
     def create(cls, values: tuple):
-        """ factory method"""
+        """ instantiate objects"""
         return cls(values)
+
     @staticmethod
-    def args_to_list_float(values):
-        """ standardize values to list of floats"""
-        list_values_float = []
+    def convert_args_to_tuple(values):
+        """ Turn values to a list of floats"""
+        args_to_tuple = []
         for item in values:
-            list_values_float.append(float(item))
-        return tuple(list_values_float)
+            args_to_tuple.append(float(item))
+        return tuple(args_to_tuple)
